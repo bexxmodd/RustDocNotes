@@ -1,1 +1,1 @@
-/home/bexx/Projects/Practice/HelloRust/target/debug/HelloRust: /home/bexx/Projects/Practice/HelloRust/src/main.rs
+/home/bexx/Projects/RustDocNotes/HelloRust/target/debug/HelloRust: /home/bexx/Projects/RustDocNotes/HelloRust/src/main.rs
