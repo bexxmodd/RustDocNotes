@@ -250,6 +250,72 @@ for i in a.iter() {
 As showed we need to at `.iter()` to the array before looping over it.
 Another useful method is `.rev()` which reverses the range. Example: `for i in (1..5).rev()`
 
+# 4. Understanding Ownership
 
+Ownership is Rust’s most unique feature, and it enables Rust to make memory safety guarantees without needing a garbage collector.
+Therefore, it’s important to understand how ownership works in Rust.
+
+
+## 4.1 What is Ownership?
+
+In Rust memory is managed through a system of ownership with a set of rules that the compiler checks at compile time.
+Ownership features do not slow doen your program.
+
+### Stack and Heap
+
+Both of them are parts of memory that are available to your code to use at runtime, but they are structured in different ways.
+The _stack_ stores valye in the order it gets them and removes the values in the opposite order. ALso referred as _last in, first out_.
+Adding data is called pushing onto the stack and removing data is called popping off the stack.
+All data stored on the stack must have a know, fixed size. Data with an uknown size at a compile time or a size that might change must be stored on the heap instead.
+
+The _heap_ is less organized: when you put data on the heap, you request a certain amount of space.
+The memory allocator finds an empty spot in the heap that is big enough, marks it as being in use, and retunrs a pointer, which is the address of that location.
+This process is called allocating on the heap or just allocating.
+
+Pushing to the stack is faster than allocating on the heap because the allocator never has to search for a place to store new data; it's always on top.
+
+Accessing data in the heap is slower than accessing data on the stack because you have to follow a pointer to get there.
+
+
+Ownership rules:
+* Each value in Rust has a variable that's called its owner.
+* There can only be one owner at a time.
+* When the owner goes out of scope, the valyue will be dropped.
+
+A scope is the range within a program for which an item is valid.
+
+All the data types covered in chapter 3 are stored on the stack and poped of the stack when their scope is over.
+String is stored on the heap. You can create a `String` from a string literal using the `from` function:
+```
+let s = String::from("Hello");
+```
+
+The double colon (`::`) is an operator that allows us to namespace this particular `from` function under the `String` type.
+In Rust, when something is stored on the heap (and memory is allocated to it) the memory is automatically returned once the variable that owns it goes out of scope.
+```
+{
+    let s = String::from("Hello"); // s is valid from this point forward
+    // do stuff with s
+}   // this scope is now over, and s is no longer valid
+```
+
+Rust automatically calls `drop` function for us after the closing the curly bracket.
+
+example:
+```
+    let s1 = String::from("hello!");
+    let s2 = s1;
+```
+You will assume that the `String` hello is bind to `s1` and makes a copy of the value and bind to `s2`. But this isn't quite what happens.
+This group Take a look at Figure 4-1 to see what is happening to String under the covers. A String is made up of three parts, shown on the left:
+a pointer to the memory that holds the contents of the string, a length, and a capacity. This group of data is stored on the stack. On the right is the memory on the heap that holds the contents.
+![](https://doc.rust-lang.org/book/img/trpl04-01.svg)
+
+The length is how much memory, in bytes, the contents of the `String` is currently using. Capacity is the total amount of memory that the `String` has received from the allocator.
+
+When we asssign `s1` to `s2` `String` data is copied, meaning we copy the pointer, the length, the capacity that are on the stack.
+We do not copy the data on the heap that the pointer refers to. It looks like this:
+
+![](https://doc.rust-lang.org/book/img/trpl04-02.svg)
 
 
