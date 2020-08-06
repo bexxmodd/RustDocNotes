@@ -97,4 +97,159 @@ This program first binds `x` to a value of 5 and then it shadows `x` by repeatin
 Shadowing is different from marking a variable as `mut`, because we’ll get a compile-time error if we accidentally try to reassign to this variable without using the `let` keyword.
 By using `let`, we can perform a few transformations on a value but have the variable be immutable after those transformations have been completed.
 
+## 3.2 Data Types
+
+Rust is a _statically typed_ language, which means that it must know the types of all variables at compile time.
+
+### Scalar Types
+A _scalar_ type represents a single value. Rust has four primary scalar types: **integers, float-point numbers, Booleans, and characters**.
+
+**Integers** are unsigned(u) or signed(i) followed by number of bits (8, 16, 32, 64, 128). Signed and Unsigned refer to whether it's possible for the number to be negative or positive.
+If negative it needs to have sign so it will be _signed_ integer. Otherwise it's _unsigned_.
+
+Default integer type is `i32` which is recommended when you are not sure which type to use.
+
+**FLoating-Point Types** also has two types, which are numbers with decimal points. We can chose the bits and are denoted with `f` --> Example: `f32`.
+default type is `f64` which is recommended.
+
+**The Boolean Type** are only bite in size. It's specified using `bool`.
+
+**Character Type** is called with `char` and is the language's most primitive alphabetic type and they use single quotes oposed to String types which uses double quotes.
+`char` type is four bytes in size and represents a Unicode Scalar Value.
+
+### Compound Types
+Rust has two primitive compound types: tuples and arrays.
+
+**Tuple** is a general way of grouping together a number of values with a variety of types into one compound type.
+Tuples have a fixed length: once declared, they cannot grow or shrink in size.
+
+We create a tuple by writing a comma-separated list of values inside parentheses. Each position inside has a type.
+Example with optional annotation:
+```
+fn main() {
+    let tup: (i32, f64 ,u8) = (500, 6.4, 1);
+}
+```
+
+Becayse a tuple is a single compound element. To get the individual values out of a tuple, we can use pattern matching to _destructure_ a tuple value:
+```
+fn main() {
+    let tup = (500, 6.1, 4);
+
+    let (x, y, z) = tup;
+}
+```
+
+In addition to destructuring through pattern matching, we can access a tuple element directly by using a period (.) followed by the index of the value we want to access.
+For example: `let six = x.2;`.
+
+**Array** is another way to have multiple values in a collection. Unlike a tuple every element in the tuple should have a same type.
+They also have fixed length like tuples. Values are written in array as comma-seperated list: `let a = [2, 3, 1, 7]`.
+
+Arrays are useful when you want your data allocated on the stack rather than the heap.
+A vector is a similar collection type provided by the standard library that is allowed to grow or shrink in size.
+
+Good example of when to use array rather than a vector is in a program that needs to know the name of the months of the year.
+It's unlikely that you will need to add or remove month so it will always contain 12 elements.
+
+Array is a single chunk of memory allocated on the stack and you can access elements in it using indexing:
+```
+let a = [1, 5, 3 ,6];
+let first = a[0];
+let second = a[1];
+```
+
+## 3.3 Functions
+
+Rust uses _snake case_ as the conventional style for function and variable names.
+function definition in Rust starts with `fn`.
+Rust doesn’t care where you define your functions, only that they’re defined somewhere.
+
+**Function Parameters** can be provided to the Rust functions, which are called _arguments_ sometimes _parameters_.
+For example:
+```
+fn another_function(x: i32, y: i32) {
+    println!("First parameter is {} and the second {}", x, y);
+}
+```
+
+In function signature you must declare the type of each parameter.
+
+Function bodies are made up of a series of statements optionally ending in an expression. Rust is an expression-based language
+
+_Statements_ are instructions that perform some action and do not return a value. Function definitions are also statments.
+_Expressions_ evaluate to a resulting value. Expressions do not include semicolons. If you add semicolon at the end you'll turn it into a statement.
+
+We declare return value type after an arrow `->`.
+The return value of the function is synonymous with the value of the final expression in the block of the body of a function.
+You can return early from a function by using `return` keyword and specify a value, but mostly functions return the last expression implicitly.
+```
+fn square(x: i32) -> i32 {
+    x * x
+}
+```
+
+## 3.4 Comments
+
+You can leave comments by starting with two forward slashes -> `// Some comment``. Comments only continue till the end of the line.
+Another type of comments, documentation comments, will be discussed in Chapter 14.
+
+
+## 3.5 Control Flow
+
+The most common constructs that let you control the flow of execution of Rust code are if expressions and loops.
+
+n `if` expression allows you to branch your code depending on conditions. `if` expressions are sometimes called _arms_.
+Example of if-else syntax:
+```
+if x < 5 {
+    println!("Low score!");
+} else {
+    println!("Good score!
+}
+```
+
+It’s also worth noting that the condition in this code must be a `bool`.
+You can have multiple conditions with `else if` expression.
+
+Because `if` is an expression, we can use it on the right side of a `let` statement:
+```
+let condition = true;
+let number = if condition { 5 } else { 6 };
+
+println!("The value of number isL: {}", number);
+```
+
+the values that have the potential to be results from each arm of the if must be the same type.
+
+Rust has three kinds of loops: `loop`, `while`, and `for`.
+
+The `loop` keyword tells Rust to execute a block of code over and over again forever or until we stop it explicitly by keyword `break`.
+You can add the value you want returned after the break expression you use to stop the loop; that value will be returned out of the loop so you can use it, as shown here:
+```
+let mut counter = 0;
+let result = loop {
+    count += 1;
+    if counter == 10 {
+        break counter * 2; // Will return 10 * 2 or 20
+    }
+}
+```
+
+Next one is the conditional loop `while` which has very familiar syntax: `while i < 0` etc.
+You could use the `while` to loop of the elements of a collection, such as an array.
+This is also slow, because the compiler adds runtime code to perform the conditional check on every element on every iteration.
+
+Better alternative is `for` loop. For example:
+```
+let a = [10, 20, 30, 40];
+for i in a.iter() {
+    println!("{}",i);
+}
+```
+As showed we need to at `.iter()` to the array before looping over it.
+Another useful method is `.rev()` which reverses the range. Example: `for i in (1..5).rev()`
+
+
+
 
