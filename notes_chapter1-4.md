@@ -333,4 +333,58 @@ There are referred as `Copy` types and some examples are: all `integer`, the `bo
 
 ## 4.2 References and Borrowing
 
+This is how you will define a `calculate_length` function that has a reference to an object as a parameter instead o taking ownership of the value:
+```
+fn main() {
+    let s1 = String::from("hello");
+    let len = calcualte_length(&s1);
+
+    println!("The length of '{}' is {}.", s1, len);
+}
+
+fn calculate_length(s: &String) -> usize {
+    s.len();
+}
+```
+Notice, we pass `&s1` into function and we take `&String` rather than String. and also the return value is gone.
+This are references and they allow you to refer to some value without taking ownership of it.
+![](https://doc.rust-lang.org/book/img/trpl04-05.svg)
+
+Because we have reference not a copy, where `&s1` refers to `s1`, `s1` will not be droped if the reference goes out of scope.
+
+We call having references as function parameters borrowing. As in real life, if a person owns something, you can borrow it from them. When you’re done, you have to give it back.
+
+If we want to return mutated value of a string from a function we need to use `&mut`. Example:
+```
+fn main() {
+    let mut s = String::from("hello");
+
+    change(&mut s);
+}
+
+fn change(some_string: &mut String) {
+    some_string.push_str(", world");
+}
+```
+
+But mutable references have one big restriction: you can have only one mutable reference to a particular piece of data in a particular scope.
+
+The benefit of having this restriction is that Rust can prevent data races at compile time. A _data race_ is similato to a race conditions and happens when:
+* Two or more pointers access the same data at the same time.
+* At least one of the pointers is being used to write to the data.
+* There’s no mechanism being used to synchronize access to the data.
+
+If we try to return a reference to the string with the function we'll get an error, because the string will be dropped when it goes out of scope (end of function)
+and refernce is pointing to a none existing string. In that case you need to return actual string instead of the reference.
+
+
+## 4.3 The Slice Type
+
+Another data type that doesn't have ownership is the _slice_. Slices let you reference a contiguous sequence of elements in a collection rather than the whole collection.
+Remember `iter` is a method that returns each element in a collection and that `enumerate` wraps the result of `iter` and returns each element as part of a tuple instead.
+For example we can iterate over the string and return each char and its index by:
+```
+for (i, &item) in string.iter().enumerate()
+```
+
 
