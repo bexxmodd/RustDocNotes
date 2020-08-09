@@ -387,4 +387,36 @@ For example we can iterate over the string and return each char and its index by
 for (i, &item) in string.iter().enumerate()
 ```
 
+A _string slice_ is a reference to a part of a `String`, and it looks like this:
+```
+let s = String::from("hello world");
 
+let hello = &s[0..5];
+let world = &s[6..11];
+```
+
+This is a reference to a portion of the string. We can create ranges within brackets by telling `[starting_index..ending_index]` :
+~[](https://doc.rust-lang.org/book/img/trpl04-06.svg)
+
+if you start from the 0 index you can drop zero and use it like this: `let slice = &s[..2];`. Similarly no need to indicate the last index value.
+
+Example function which returns a slice:
+```bash
+fn first_word(s: &String) -> &str {
+    let bytes = s.as_bytes();
+
+    for (i, &item) in bytes.iter().enumerate() {
+        if item == b' ' {
+            return &s[0..i];
+        }
+    }
+
+    &s[..]
+}
+```
+If we have an immutable reference to something, we cannot also take a mutable reference. Because `clear` needs to truncate the `String`,
+it needs to get a mutable reference.
+
+For example `let s = "Hello, world!";` here `s` is `&str`: it's slice pointing to that specific point of the binary. And they are immutable.
+
+There also are other slices. For example integer slices `let a = [2, 4, 2, 6];` we can slice like this: `let slice = &a[..2];`
