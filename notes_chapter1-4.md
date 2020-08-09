@@ -58,7 +58,7 @@ Here we rewrite the already existing `guess` value with the new one. Or as we sa
 
 * `parse` : method on strings parses a string into some kind of number. Because it can parse into variety of numbers we need to tell exactly what type.
 
-```
+```bash
 let guess: u32 = match guess.trim().parse() {
     Ok(num) = num,
     Err(_) = continue,
@@ -85,7 +85,7 @@ const MAX_POINTS: u32 = 100_000;
 -----------
 Rustaceans say that the first variable is _shadowed_ by the second, which means that the second variable's value is what appears when the variable is used.
 We can shadow a variable by using the same variable's name and repeating the use of the `let` keyword as follows:
-```
+```bash
 fn main() {
     let x = 5;
     let x = x + 1;
@@ -125,14 +125,14 @@ Tuples have a fixed length: once declared, they cannot grow or shrink in size.
 
 We create a tuple by writing a comma-separated list of values inside parentheses. Each position inside has a type.
 Example with optional annotation:
-```
+```bash
 fn main() {
     let tup: (i32, f64 ,u8) = (500, 6.4, 1);
 }
 ```
 
 Becayse a tuple is a single compound element. To get the individual values out of a tuple, we can use pattern matching to _destructure_ a tuple value:
-```
+```bash
 fn main() {
     let tup = (500, 6.1, 4);
 
@@ -153,7 +153,7 @@ Good example of when to use array rather than a vector is in a program that need
 It's unlikely that you will need to add or remove month so it will always contain 12 elements.
 
 Array is a single chunk of memory allocated on the stack and you can access elements in it using indexing:
-```
+```bash
 let a = [1, 5, 3 ,6];
 let first = a[0];
 let second = a[1];
@@ -167,7 +167,7 @@ Rust doesn’t care where you define your functions, only that they’re defined
 
 **Function Parameters** can be provided to the Rust functions, which are called _arguments_ sometimes _parameters_.
 For example:
-```
+```bash
 fn another_function(x: i32, y: i32) {
     println!("First parameter is {} and the second {}", x, y);
 }
@@ -183,7 +183,7 @@ _Expressions_ evaluate to a resulting value. Expressions do not include semicolo
 We declare return value type after an arrow `->`.
 The return value of the function is synonymous with the value of the final expression in the block of the body of a function.
 You can return early from a function by using `return` keyword and specify a value, but mostly functions return the last expression implicitly.
-```
+```bash
 fn square(x: i32) -> i32 {
     x * x
 }
@@ -201,7 +201,7 @@ The most common constructs that let you control the flow of execution of Rust co
 
 n `if` expression allows you to branch your code depending on conditions. `if` expressions are sometimes called _arms_.
 Example of if-else syntax:
-```
+```bash
 if x < 5 {
     println!("Low score!");
 } else {
@@ -213,7 +213,7 @@ It’s also worth noting that the condition in this code must be a `bool`.
 You can have multiple conditions with `else if` expression.
 
 Because `if` is an expression, we can use it on the right side of a `let` statement:
-```
+```bash
 let condition = true;
 let number = if condition { 5 } else { 6 };
 
@@ -226,7 +226,7 @@ Rust has three kinds of loops: `loop`, `while`, and `for`.
 
 The `loop` keyword tells Rust to execute a block of code over and over again forever or until we stop it explicitly by keyword `break`.
 You can add the value you want returned after the break expression you use to stop the loop; that value will be returned out of the loop so you can use it, as shown here:
-```
+```bash
 let mut counter = 0;
 let result = loop {
     count += 1;
@@ -241,7 +241,7 @@ You could use the `while` to loop of the elements of a collection, such as an ar
 This is also slow, because the compiler adds runtime code to perform the conditional check on every element on every iteration.
 
 Better alternative is `for` loop. For example:
-```
+```bash
 let a = [10, 20, 30, 40];
 for i in a.iter() {
     println!("{}",i);
@@ -286,13 +286,13 @@ A scope is the range within a program for which an item is valid.
 
 All the data types covered in chapter 3 are stored on the stack and poped of the stack when their scope is over.
 String is stored on the heap. You can create a `String` from a string literal using the `from` function:
-```
+```bash
 let s = String::from("Hello");
 ```
 
 The double colon (`::`) is an operator that allows us to namespace this particular `from` function under the `String` type.
 In Rust, when something is stored on the heap (and memory is allocated to it) the memory is automatically returned once the variable that owns it goes out of scope.
-```
+```bash
 {
     let s = String::from("Hello"); // s is valid from this point forward
     // do stuff with s
@@ -302,7 +302,7 @@ In Rust, when something is stored on the heap (and memory is allocated to it) th
 Rust automatically calls `drop` function for us after the closing the curly bracket.
 
 example:
-```
+```bash
     let s1 = String::from("hello!");
     let s2 = s1;
 ```
@@ -323,7 +323,7 @@ This is what actually happens:
 ![](https://doc.rust-lang.org/book/img/trpl04-04.svg)
 
 If we want to deeply copy the heap data of the `String`, not just the stack data, we can use a common method called `clone()`:
-```
+```bash
 let s1 = String::from("hello");
 let s2 = s1.clone();
 ```
@@ -334,7 +334,7 @@ There are referred as `Copy` types and some examples are: all `integer`, the `bo
 ## 4.2 References and Borrowing
 
 This is how you will define a `calculate_length` function that has a reference to an object as a parameter instead o taking ownership of the value:
-```
+```bash
 fn main() {
     let s1 = String::from("hello");
     let len = calcualte_length(&s1);
@@ -355,7 +355,7 @@ Because we have reference not a copy, where `&s1` refers to `s1`, `s1` will not 
 We call having references as function parameters borrowing. As in real life, if a person owns something, you can borrow it from them. When you’re done, you have to give it back.
 
 If we want to return mutated value of a string from a function we need to use `&mut`. Example:
-```
+```bash
 fn main() {
     let mut s = String::from("hello");
 
@@ -383,12 +383,12 @@ and refernce is pointing to a none existing string. In that case you need to ret
 Another data type that doesn't have ownership is the _slice_. Slices let you reference a contiguous sequence of elements in a collection rather than the whole collection.
 Remember `iter` is a method that returns each element in a collection and that `enumerate` wraps the result of `iter` and returns each element as part of a tuple instead.
 For example we can iterate over the string and return each char and its index by:
-```
+```bash
 for (i, &item) in string.iter().enumerate()
 ```
 
 A _string slice_ is a reference to a part of a `String`, and it looks like this:
-```
+```bash
 let s = String::from("hello world");
 
 let hello = &s[0..5];
