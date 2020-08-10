@@ -25,7 +25,7 @@ For example let's create an mutable variable which will be a string.
 let mut bar = String::new();
 ```
 
-`::` syntax indicates that new is an associated function of the string type.
+* `::` syntax indicates that new is an associated function of the string type.
 
 * `&` indicates that the argument is a reference, which gives you a way to let multiple parts of your code access one piece of data without needing to copy that data into memory multiple times.
 my default _referances_ are mutable so to make _reference_ mutable you need to use `&mut <varname>`.
