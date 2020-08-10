@@ -28,7 +28,7 @@ let mut bar = String::new();
 * `::` syntax indicates that new is an associated function of the string type.
 
 * `&` indicates that the argument is a reference, which gives you a way to let multiple parts of your code access one piece of data without needing to copy that data into memory multiple times.
-my default _referances_ are mutable so to make _reference_ mutable you need to use `&mut <varname>`.
+my default _referances_ are immutable so to make _reference_ mutable you need to use `&mut <varname>`.
 
 Many types are named `Result` in std. `Result` types are _enumarates_, often refered as *enums*.
 An enumeration is a type that can have a fixed set of values, and those values are called the enum’s variants.
