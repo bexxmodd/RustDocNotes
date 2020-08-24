@@ -1,0 +1,1 @@
+/home/bexx/Projects/RustDocNotes/homework1/target/debug/homework1: /home/bexx/Projects/RustDocNotes/homework1/src/lib.rs /home/bexx/Projects/RustDocNotes/homework1/src/lib2.rs /home/bexx/Projects/RustDocNotes/homework1/src/lib3.rs /home/bexx/Projects/RustDocNotes/homework1/src/main.rs
