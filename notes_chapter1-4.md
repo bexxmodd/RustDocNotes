@@ -30,7 +30,7 @@ let mut bar = String::new();
 * `&` indicates that the argument is a reference, which gives you a way to let multiple parts of your code access one piece of data without needing to copy that data into memory multiple times.
 my default _referances_ are immutable so to make _reference_ mutable you need to use `&mut <varname>`.
 
-Many types are named `Result` in std. `Result` types are _enumarates_, often referred as *enums*.
+Many types are named `Result` in std. `Result` types are _enumarates_, often referred to as *enums*.
 An enumeration is a type that can have a fixed set of values, and those values are called the enum’s variants.
 For `io::stdin` `Result`, the variants are `ok` or `Err`. `ok` indicates that operation was successful and `Err` that operation failed.
 
@@ -329,7 +329,7 @@ let s2 = s1.clone();
 ```
 
 Also, the types such as integers that have a known size at compile time are stored entirely on the stack, so copies of the actual values are quick to make.
-These are referred to as `Copy` types and some examples are: all `integer`, the `boolean` types, all the `float`, the `char`, and `Tuples` only if they contain that are also `Copy` type.
+These are referred to as `Copy` types and some examples are all `integer`, the `boolean` types, all the `float`, the `char`, and `Tuples` only if they contain that are also `Copy` type.
 
 ## 4.2 References and Borrowing
 
