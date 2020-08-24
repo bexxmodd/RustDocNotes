@@ -5,7 +5,7 @@ If you’re familiar with an object-oriented language, a struct is like an objec
 
 ## 5.1 Defining and Instantiating Structs
 
-Structure is defined with keyword `struct` its name and names and types of the pieces of data inside the curley bracket:
+The structure is defined with keyword `struct` its name and names and types of the pieces of data inside the curly bracket:
 ```bash
 struct User {
     username: String,
@@ -66,7 +66,7 @@ We can also achieve the same with less code (even if we are copying several argu
 The syntax `..user1` specifies that the remaining fields should have the same value as the fields in the given instance.
 
 You can also define structs that look similar to tuples, called _tuple structs_. Those structs have no name associated with their fields, rather just the types.
-Tuple structs are useful when you want to give a tuple name and it be different from other tuples:
+Tuple structs are useful when you want to give a tuple name and it is different from other tuples:
 ```bash
 struct Color(i32, i32, i32);
 
@@ -83,7 +83,7 @@ It’s possible for structs to store references to data owned by something else,
 
 ## 5.2 Example Program
 
-Let's write a program that calcualtes the area of rectangle.
+Let's write a program that calculates the area of the rectangle.
 
 We use struct to do that:
 ```bash
@@ -111,8 +111,8 @@ we want to borrow the struct rather than take ownership of it. This way `main` r
 That's why we use `&` in the function signature and where we call the function.
 
 ### Adding functionality
-When printing complex data types, inside of curly brackets of `println!()` you can add `{:?}` for full display of it of `{:#?}` for pretty print.
-But Rust doesn't include functionality to print out debugging infromation, we have to explicitly opt in to make available.
+When printing complex data types, inside of curly brackets of `println!()` you can add `{:?}` for a full display of it of `{:#?}` for pretty print.
+But Rust doesn't include functionality to print out debugging information, we have to explicitly opt in to make available.
 To do that we add the annotation `#[derive(Debug)]` just before the struct definition:
 ```
 #[derive(Degub)]
@@ -170,10 +170,10 @@ We can also have multiple `impl` blocks.
 
 # 6. Enums and Pattern Matching
 
-Enums allow you to define a type by enumerating its possitble variants.
+Enums allow you to define a type by enumerating its possible variants.
 
-## 6.1 Definint an Enum
-let's for example define `enum` for ip address, one with 4 digit and one with 6 digits:
+## 6.1 Defining an Enum
+lets, for example, define `enum` for ip address, one with 4 digits and one with 6 digits:
 ```bash
 enum IpAddrKind {
     V4,
@@ -181,7 +181,7 @@ enum IpAddrKind {
 }
 ```
 
-We can create instances of each of the two cariants like this:
+We can create instances of each of the two variants like this:
 ```bash
 let four = IpAddrKind::V4;
 let six = IpAddrKind::v6;
@@ -206,7 +206,7 @@ let home = IpAddr {
 }
 ```
 
-We can represent the same concept in more coincise way by just using enum by puting data directly into each enum variant.
+We can represent the same concept more concisely by just using enum by putting data directly into each enum variant.
 ```bash
 enum IpAddr {
     V4(String),
