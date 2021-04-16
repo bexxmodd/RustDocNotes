@@ -1,0 +1,10 @@
+Next, we need some way to actually get data from the file
+system so we can process it, and write it back when we’re done.
+Rust has a robust set of tools for input and output, but the 
+designers of the standard library know that reading and writing 
+files is very common, and they’ve made it easy on purpose. All we 
+need to do is import one module, std::fs, and we get access to the 
+read_to_string and write functions.
+
+
+
