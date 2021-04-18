@@ -5,6 +5,16 @@ struct Rectangle {
 }
 
 impl Rectangle {
+    // example of the associated function
+    // doesn't take self as a parameter
+    fn square(size: u32) -> Rectangle {
+        Rectangle {
+            width: size,
+            height: size,
+        }
+    }
+
+    // methods
     fn area(&self) -> u32 {
         self.width * self.height
     }
@@ -47,4 +57,7 @@ fn main() {
 
     println!("Can rect1 hold rect2? {}", rect1.can_hold(&rect2));
     println!("Can rect1 hold rect3? {}", rect1.can_hold(&rect3));
+
+    // calling associated function
+    let sq = Rectangle::square(35);
 }
