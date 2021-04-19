@@ -5,6 +5,7 @@ enum SpreadsheetCell {
 }
 
 fn main() {
+
     let mut v2 = Vec::new();
     v2.push(2);
     v2.push(31);
@@ -27,7 +28,6 @@ fn main() {
     for i in &v2 {
         print!("{}, ", i);
     }
-    
     
 
     // Using an enum plus a match expression means that Rust will
