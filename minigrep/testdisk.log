@@ -1,0 +1,496 @@
+
+
+Sat Aug  1 22:17:34 2020
+Command line: TestDisk
+
+TestDisk 7.1, Data Recovery Utility, July 2019
+Christophe GRENIER <grenier@cgsecurity.org>
+https://www.cgsecurity.org
+OS: Linux, kernel 5.4.0-42-generic (#46-Ubuntu SMP Fri Jul 10 00:24:02 UTC 2020) x86_64
+Compiler: GCC 9.2
+ext2fs lib: 1.45.5, ntfs lib: libntfs-3g, reiserfs lib: none, ewf lib: none, curses lib: ncurses 6.1
+User is not root!
+Hard disk list
+
+
+TestDisk exited normally.
+Using locale 'en_US.UTF-8'.
+
+
+Sat Aug  1 22:17:34 2020
+Command line: TestDisk /debug
+
+TestDisk 7.1, Data Recovery Utility, July 2019
+Christophe GRENIER <grenier@cgsecurity.org>
+https://www.cgsecurity.org
+OS: Linux, kernel 5.4.0-42-generic (#46-Ubuntu SMP Fri Jul 10 00:24:02 UTC 2020) x86_64
+Compiler: GCC 9.2
+ext2fs lib: 1.45.5, ntfs lib: libntfs-3g, reiserfs lib: none, ewf lib: none, curses lib: ncurses 6.1
+/dev/sda: LBA, HPA, LBA48 support
+/dev/sda: size       234441648 sectors
+/dev/sda: user_max   234441648 sectors
+/dev/sda: native_max 234441648 sectors
+/dev/sdb: LBA, HPA, LBA48, DCO support
+/dev/sdb: size       1953525168 sectors
+/dev/sdb: user_max   1953525168 sectors
+/dev/sdb: native_max 1953525168 sectors
+Warning: can't get size for Disk /dev/mapper/control - 0 B - 0 sectors, sector size=512
+Warning: can't get size for Disk /dev/loop29 - 0 B - 0 sectors, sector size=512
+Hard disk list
+Disk /dev/sda - 120 GB / 111 GiB - CHS 14593 255 63, sector size=512 - KINGSTON SHFS37A120G, S/N:50026B7257077C0C, FW:603ABBF0
+Disk /dev/sdb - 1000 GB / 931 GiB - CHS 121601 255 63, sector size=512 - WDC WD10EZEX-00BN5A0, S/N:WD-WCC3F1DZJDYF, FW:01.01A01
+Disk /dev/loop0 - 9510 KB / 9288 KiB - 18576 sectors (RO), sector size=512
+Disk /dev/loop1 - 57 MB / 54 MiB - 112536 sectors (RO), sector size=512
+Disk /dev/loop10 - 135 KB / 132 KiB - 264 sectors (RO), sector size=512
+Disk /dev/loop11 - 57 MB / 54 MiB - 112552 sectors (RO), sector size=512
+Disk /dev/loop12 - 60 MB / 57 MiB - 117376 sectors (RO), sector size=512
+Disk /dev/loop13 - 171 MB / 163 MiB - 335192 sectors (RO), sector size=512
+Disk /dev/loop14 - 240 MB / 229 MiB - 469840 sectors (RO), sector size=512
+Disk /dev/loop15 - 52 MB / 49 MiB - 101960 sectors (RO), sector size=512
+Disk /dev/loop16 - 65 MB / 62 MiB - 127160 sectors (RO), sector size=512
+Disk /dev/loop17 - 131 MB / 125 MiB - 257736 sectors (RO), sector size=512
+Disk /dev/loop18 - 240 MB / 229 MiB - 470096 sectors (RO), sector size=512
+Disk /dev/loop19 - 215 MB / 205 MiB - 420248 sectors (RO), sector size=512
+Disk /dev/loop2 - 148 MB / 141 MiB - 290064 sectors (RO), sector size=512
+Disk /dev/loop20 - 31 MB / 29 MiB - 61200 sectors (RO), sector size=512
+Disk /dev/loop21 - 499 KB / 488 KiB - 976 sectors (RO), sector size=512
+Disk /dev/loop22 - 101 MB / 96 MiB - 198624 sectors (RO), sector size=512
+Disk /dev/loop23 - 101 MB / 96 MiB - 197640 sectors (RO), sector size=512
+Disk /dev/loop24 - 70 MB / 67 MiB - 138368 sectors (RO), sector size=512
+Disk /dev/loop25 - 45 MB / 43 MiB - 88376 sectors (RO), sector size=512
+Disk /dev/loop26 - 184 MB / 175 MiB - 360168 sectors (RO), sector size=512
+Disk /dev/loop27 - 31 MB / 29 MiB - 61080 sectors (RO), sector size=512
+Disk /dev/loop28 - 151 MB / 144 MiB - 295656 sectors (RO), sector size=512
+Disk /dev/loop3 - 184 MB / 176 MiB - 361192 sectors (RO), sector size=512
+Disk /dev/loop4 - 169 MB / 161 MiB - 330576 sectors (RO), sector size=512
+Disk /dev/loop5 - 166 MB / 158 MiB - 324416 sectors (RO), sector size=512
+Disk /dev/loop6 - 267 MB / 255 MiB - 523400 sectors (RO), sector size=512
+Disk /dev/loop7 - 252 MB / 240 MiB - 493152 sectors (RO), sector size=512
+Disk /dev/loop8 - 143 KB / 140 KiB - 280 sectors (RO), sector size=512
+Disk /dev/loop9 - 166 MB / 158 MiB - 324408 sectors (RO), sector size=512
+Disk /dev/nvme0n1 - 512 GB / 476 GiB - CHS 488386 64 32, sector size=512
+
+Partition table type (auto): Intel
+Disk /dev/nvme0n1 - 512 GB / 476 GiB
+Partition table type: Intel
+
+Interface Advanced
+Geometry from i386 MBR: head=255 sector=2
+BAD_RS LBA=2048 8320
+FAT32 at 1/0/1
+Info: size boot_sector 1048576, partition 1048576
+FAT1 : 32-1055
+FAT2 : 1056-2079
+start_rootdir : 2080 root cluster : 2
+Data : 2080-1048575
+sectors : 1048576
+cluster_size : 8
+no_of_cluster : 130812 (2 - 130813)
+fat_length 1024 calculated 1022
+set_FAT_info: name from BS used
+BAD_RS LBA=1052670 2103233
+BAD_RS LBA=1052672 2103233
+get_geometry_from_list_part_aux head=64 nbr=4
+get_geometry_from_list_part_aux head=8 nbr=4
+get_geometry_from_list_part_aux head=16 nbr=4
+get_geometry_from_list_part_aux head=32 nbr=4
+get_geometry_from_list_part_aux head=64 nbr=4
+get_geometry_from_list_part_aux head=128 nbr=2
+get_geometry_from_list_part_aux head=255 nbr=1
+ 1 * FAT32                    1   0  1   512  63 32    1048576 [NO NAME]
+     FAT32, blocksize=4096, 536 MB / 512 MiB
+ 2 E extended               513  63 31 488385  63 32  999161858
+ 5 L Linux                  514   0  1 488385  63 32  999161856
+     ext4 blocksize=4096 Large_file Sparse_SB Recover, 511 GB / 476 GiB
+
+Analyse Disk /dev/nvme0n1 - 512 GB / 476 GiB - CHS 488386 64 32
+Geometry from i386 MBR: head=255 sector=2
+BAD_RS LBA=2048 8320
+FAT32 at 1/0/1
+Info: size boot_sector 1048576, partition 1048576
+FAT1 : 32-1055
+FAT2 : 1056-2079
+start_rootdir : 2080 root cluster : 2
+Data : 2080-1048575
+sectors : 1048576
+cluster_size : 8
+no_of_cluster : 130812 (2 - 130813)
+fat_length 1024 calculated 1022
+set_FAT_info: name from BS used
+BAD_RS LBA=1052670 2103233
+BAD_RS LBA=1052672 2103233
+get_geometry_from_list_part_aux head=64 nbr=4
+get_geometry_from_list_part_aux head=8 nbr=4
+get_geometry_from_list_part_aux head=16 nbr=4
+get_geometry_from_list_part_aux head=32 nbr=4
+get_geometry_from_list_part_aux head=64 nbr=4
+get_geometry_from_list_part_aux head=128 nbr=2
+get_geometry_from_list_part_aux head=255 nbr=1
+Current partition structure:
+ 1 * FAT32                    1   0  1   512  63 32    1048576 [NO NAME]
+
+Warning: Bad ending head (CHS and LBA don't match)
+ 2 E extended               513  63 31 488385  63 32  999161858
+
+Warning: Bad starting head (CHS and LBA don't match)
+ 5 L Linux                  514   0  1 488385  63 32  999161856
+
+Warning: Bad starting head (CHS and LBA don't match)
+
+search_part()
+Disk /dev/nvme0n1 - 512 GB / 476 GiB - CHS 488386 64 32
+FAT32 at 1/0/1
+FAT1 : 32-1055
+FAT2 : 1056-2079
+start_rootdir : 2080 root cluster : 2
+Data : 2080-1048575
+sectors : 1048576
+cluster_size : 8
+no_of_cluster : 130812 (2 - 130813)
+fat_length 1024 calculated 1022
+set_FAT_info: name from BS used
+
+FAT32 at 1/0/1
+FAT: cluster=2(0x2), pos=4128
+     FAT32                    1   0  1   512  63 32    1048576 [NO NAME]
+     FAT32, blocksize=4096, 536 MB / 512 MiB
+
+recover_EXT2: s_block_group_nr=0/3811, s_mnt_count=78/4294967295, s_blocks_per_group=32768, s_inodes_per_group=8192
+recover_EXT2: s_blocksize=4096
+recover_EXT2: s_blocks_count 124895232
+recover_EXT2: part_size 999161856
+Filesystem created: Thu Jun 18 19:29:44 2020
+Last mount time:    Sat Aug  1 07:38:55 2020
+     Linux                  514   0  1 488385  63 32  999161856
+     ext4 blocksize=4096 Large_file Sparse_SB Recover, 511 GB / 476 GiB
+get_geometry_from_list_part_aux head=64 nbr=4
+get_geometry_from_list_part_aux head=8 nbr=4
+get_geometry_from_list_part_aux head=16 nbr=4
+get_geometry_from_list_part_aux head=32 nbr=4
+get_geometry_from_list_part_aux head=64 nbr=4
+get_geometry_from_list_part_aux head=128 nbr=2
+get_geometry_from_list_part_aux head=255 nbr=1
+
+Results
+   * FAT32                    1   0  1   512  63 32    1048576 [NO NAME]
+     FAT32, blocksize=4096, 536 MB / 512 MiB
+   P Linux                  514   0  1 488385  63 32  999161856
+     ext4 blocksize=4096 Large_file Sparse_SB Recover, 511 GB / 476 GiB
+
+Hint for advanced users: dmsetup may be used if you prefer to avoid rewriting the partition table for the moment:
+echo "0 1048576 linear /dev/nvme0n1 2048" | dmsetup create test0
+echo "0 999161856 linear /dev/nvme0n1 1052672" | dmsetup create test1
+
+
+dir_partition inode=2
+   P Linux                  514   0  1 488385  63 32  999161856
+     ext4 blocksize=4096 Large_file Sparse_SB Recover, 511 GB / 476 GiB
+Directory /
+       2 drwxr-xr-x     0      0      4096 18-Jun-2020 22:03 .
+       2 drwxr-xr-x     0      0      4096 18-Jun-2020 22:03 ..
+      11 drwx------     0      0     16384 18-Jun-2020 19:29 lost+found
+ 5505025 drwxr-xr-x     0      0      4096 27-Jul-2020 09:52 boot
+      12 -rw-------     0      0 2147483648 18-Jun-2020 19:29 swapfile
+ 28180481 drwxr-xr-x     0      0     12288  1-Aug-2020 09:16 etc
+ 22937601 drwxr-xr-x     0      0      4096 18-Jun-2020 19:44 media
+ 17694721 drwxr-xr-x     0      0      4096 23-Apr-2020 03:42 var
+      13 lrwxrwxrwx     0      0         7 18-Jun-2020 19:29 bin
+ 30539777 drwxr-xr-x     0      0      4096 23-Apr-2020 03:38 dev
+ 3932161 drwxr-xr-x     0      0      4096 18-Jun-2020 19:31 home
+      14 lrwxrwxrwx     0      0         7 18-Jun-2020 19:29 lib
+      15 lrwxrwxrwx     0      0         9 18-Jun-2020 19:29 lib32
+      16 lrwxrwxrwx     0      0         9 18-Jun-2020 19:29 lib64
+      17 lrwxrwxrwx     0      0        10 18-Jun-2020 19:29 libx32
+ 10092545 drwxr-xr-x     0      0      4096 18-Jun-2020 20:07 mnt
+ 1572865 drwxr-xr-x     0      0      4096 21-Jul-2020 17:13 opt
+ 12451841 drwxr-xr-x     0      0      4096 15-Apr-2020 07:09 proc
+ 27394049 drwx------     0      0      4096 18-Jul-2020 21:10 root
+ 30015489 drwxr-xr-x     0      0      4096 18-Jun-2020 19:31 run
+      18 lrwxrwxrwx     0      0         8 18-Jun-2020 19:29 sbin
+ 19529729 drwxr-xr-x     0      0      4096 21-Jul-2020 17:11 snap
+ 2228225 drwxr-xr-x     0      0      4096 23-Apr-2020 03:32 srv
+ 10747905 drwxr-xr-x     0      0      4096 15-Apr-2020 07:09 sys
+ 19791873 drwxrwxrwt     0      0     12288  1-Aug-2020 22:00 tmp
+  393217 drwxr-xr-x     0      0      4096 23-Apr-2020 03:34 usr
+ 26214401 drwxrwxr-x     0      0      4096 18-Jun-2020 19:30 cdrom
+X     19 -rw-r--r--     0      0         0 18-Jun-2020 22:03 ..bashrc.swp
+      20 -rw-r--r--     0      0       272 18-Jun-2020 22:03 .bashrc
+
+dir_partition inode=3932161
+   P Linux                  514   0  1 488385  63 32  999161856
+     ext4 blocksize=4096 Large_file Sparse_SB Recover, 511 GB / 476 GiB
+Directory /home
+ 3932161 drwxr-xr-x     0      0      4096 18-Jun-2020 19:31 .
+       2 drwxr-xr-x     0      0      4096 18-Jun-2020 22:03 ..
+ 3933821 drwxr-xr-x  1000   1000      4096  1-Aug-2020 22:17 bexx
+
+dir_partition inode=3933821
+   P Linux                  514   0  1 488385  63 32  999161856
+     ext4 blocksize=4096 Large_file Sparse_SB Recover, 511 GB / 476 GiB
+Directory /home/bexx
+ 3933821 drwxr-xr-x  1000   1000      4096  1-Aug-2020 22:17 .
+ 3932161 drwxr-xr-x     0      0      4096 18-Jun-2020 19:31 ..
+ 3932221 -rw-r--r--  1000   1000     17803 18-Jul-2020 22:00 .bashrc
+ 3933823 -rw-r--r--  1000   1000       220 18-Jun-2020 19:31 .bash_logout
+ 3932220 -rw-r--r--  1000   1000       807  7-Jul-2020 21:16 .profile
+ 3933964 drwxr-xr-x  1000   1000      4096 18-Jun-2020 22:01 .local
+ 4327061 drwxr-xr-x  1000   1000      4096  1-Aug-2020 09:18 .config
+ 4589219 drwxr-xr-x  1000   1000      4096 23-Jul-2020 21:36 .cache
+ 5506010 drwx------  1000   1000      4096  1-Aug-2020 21:37 .gnupg
+ 5506021 drwxr-xr-x  1000   1000      4096 18-Jun-2020 19:44 Desktop
+ 5506023 drwxr-xr-x  1000   1000     12288  1-Aug-2020 22:00 Downloads
+ 5506028 drwxr-xr-x  1000   1000      4096 18-Jun-2020 19:44 Templates
+ 5506029 drwxr-xr-x  1000   1000      4096 18-Jun-2020 19:44 Public
+ 5506030 drwxr-xr-x  1000   1000      4096 23-Jul-2020 14:35 Documents
+ 5506031 drwxr-xr-x  1000   1000      4096 18-Jun-2020 19:44 Music
+ 5506032 drwxr-xr-x  1000   1000      4096  1-Aug-2020 16:04 Pictures
+ 5506033 drwxr-xr-x  1000   1000      4096 19-Jul-2020 22:14 Videos
+ 5506179 drwx------  1000   1000      4096 18-Jun-2020 19:45 .mozilla
+ 5506245 drwxr-xr-x  1000   1000      4096 21-Jul-2020 17:06 snap
+ 3933965 -rw-r--r--  1000   1000         0 18-Jun-2020 19:55 .sudo_as_admin_successful
+ 3932226 -rw-------  1000   1000     42322  1-Aug-2020 22:17 .bash_history
+ 3933967 drwx------  1000   1000      4096 20-Jun-2020 07:01 .ssh
+ 3933968 drwxrwxrwx  1000   1000      4096  1-Aug-2020 08:17 Projects
+ 3935451 -rw-rw-r--  1000   1000       231 12-Jul-2020 13:35 .wget-hsts
+ 3935452 drwxr-xr-x  1000   1000      4096 18-Jun-2020 21:26 .var
+ 4071576 drwxrwxrwx  1000   1000      4096 18-Jun-2020 14:48 HydraPaper-1.2
+ 3935529 drwxrwxr-x  1000   1000      4096 18-Jun-2020 21:35 anaconda3
+ 3935534 drwxrwxr-x  1000   1000      4096 18-Jun-2020 21:39 .conda
+ 3932204 -rw-------  1000   1000       839 29-Jul-2020 20:14 .python_history
+ 3935532 -rw-rw-r--  1000   1000        43 18-Jun-2020 21:39 .condarc
+ 3935612 drwxrwxr-x  1000   1000      4096 18-Jun-2020 21:39 .anaconda
+ 3937062 drwxrwxr-x  1000   1000      4096 26-Jun-2020 13:32 .jupyter
+ 3937064 drwxrwxr-x  1000   1000      4096 18-Jun-2020 21:56 .vscode
+ 3937067 drwx------  1000   1000      4096 18-Jun-2020 21:56 .pki
+ 3937189 drwxrwxr-x  1000   1000      4096  1-Aug-2020 11:36 .steam
+ 4327226 drwxrwxr-x  1000   1000      4096 18-Jun-2020 22:11 Steam
+ 3932168 lrwxrwxrwx  1000   1000        29  1-Aug-2020 11:36 .steampath
+ 3932169 lrwxrwxrwx  1000   1000        27  1-Aug-2020 11:36 .steampid
+ 3937202 -rw-------  1000   1000       256 18-Jun-2020 22:11 .pulse-cookie
+ 3937203 drwxrwxr-x  1000   1000      4096 18-Jun-2020 22:17 .tmcbeans
+ 9703410 drwxrwxr-x  1000   1000      4096 18-Jun-2020 22:17 .java
+ 9830666 drwxrwxr-x  1000   1000      4096 25-Jul-2020 08:19 NetBeansProjects
+ 9831037 drwxrwxr-x  1000   1000      4096 18-Jun-2020 22:18 .m2
+ 5513001 drwxrwxr-x  1000   1000      4096  1-Aug-2020 08:18 .pylint.d
+ 3932213 -rw-------  1000   1000     12875 21-Jul-2020 21:08 .viminfo
+ 4457985 drwxrwxr-x  1000   1000      4096 18-Jul-2020 22:14 .vim
+ 10235265 drwx------  1000   1000      4096 19-Jun-2020 06:54 .thunderbird
+ 10235323 drwxr-xr-x  1000   1000      4096  8-Dec-2016 10:24 wallpapers
+ 10235342 drwxr-xr-x  1000   1000      4096 28-Mar-2017 03:43 .icons
+ 10245911 drwxr-xr-x  1000   1000      4096 11-Jul-2020 09:39 .themes
+ 4072385 drwxrwxr-x  1000   1000      4096  1-Aug-2020 22:15 Books
+ 3932218 -rw-rw-r--  1000   1000        84  5-Jul-2020 21:50 .gitconfig
+ 3932223 -rw-rw-r--  1000   1000       782 19-Jul-2020 08:02 .vimrc
+ 3932180 -rw-------  1000   1000     12288 12-Jul-2020 19:57 .swp
+ 5246119 drwx------  1000   1000      4096 22-Jun-2020 21:46 .fltk
+ 4072360 drwxr-xr-x  1000   1000      4096 23-Jun-2020 07:59 .AMD
+ 9571237 drwxr-xr-x  1000   1000      4096 23-Jun-2020 16:06 .ipython
+ 3937751 -rw-rw-r--  1000   1000         0 26-Jun-2020 07:32 .hushlogin
+ 3937090 drwxrwxr-x  1000   1000      4096 26-Jun-2020 12:18 .mono
+ 3937793 drwxrwxr-x  1000   1000      4096 26-Jun-2020 12:20 .kite
+ 3932202 -rw-rw-r--  1000   1000      2994  1-Jul-2020 14:31 gpu_benchmark.txt
+ 3932190 -rw-------  1000   1000         0  1-Jul-2020 22:14 .python_history-58288.tmp
+ 3932175 -rw-r--r--  1000   1000      4525  5-Jul-2020 16:34 .bashrc.save
+ 3932201 -rw-rw-r--  1000   1000       141 12-Jul-2020 13:57 .powerline-shell.json
+ 3932200 -rw-------  1000   1000     12288 17-Jul-2020 21:58 .swo
+ 3932222 -rw-rw-r--  1000   1000  61298592 21-Aug-2019 17:22 slack-desktop-4.0.2-amd64.deb
+ 5114440 drwx------  1000   1000      4096 21-Jul-2020 06:54 .gconf
+ 4460235 drwxrwxr-x  1000   1000      4096 21-Jul-2020 20:49 .zoom
+ 14812085 drwx------  1000   1000      4096 22-Jul-2020 07:45 .xournal
+ 10359085 drwxrwxr-x  1000   1000      4096  1-Aug-2020 09:20 VirtualBox_VMs
+ 3932197 -rw-rw-r--  1000   1000      7915  1-Aug-2020 22:18 testdisk.log
+ 4194331 drwxr-xr-x     0      0      4096  1-Aug-2020 22:15 home
+X3932226 -rw-------  1000   1000     42322  1-Aug-2020 22:17 .bash_history-06785.tmp
+
+dir_partition inode=5506030
+   P Linux                  514   0  1 488385  63 32  999161856
+     ext4 blocksize=4096 Large_file Sparse_SB Recover, 511 GB / 476 GiB
+Directory /home/bexx/Documents
+ 5506030 drwxr-xr-x  1000   1000      4096 23-Jul-2020 14:35 .
+ 3933821 drwxr-xr-x  1000   1000      4096  1-Aug-2020 22:17 ..
+ 17826859 drwxrwxr-x  1000   1000      4096  1-Aug-2020 21:53 Books
+ 6425109 drwxrwxrwx  1000   1000      4096 18-Jun-2020 14:47 Cheatsheats
+ 5536163 -rw-rw-r--  1000   1000   2734692 28-Jun-2020 09:47 wasd-inkscape-104-06.11.2020.svg
+ 17833978 drwxrwxr-x  1000   1000      4096 10-Jul-2020 18:07 Keyboard
+ 10888435 drwxrwxr-x  1000   1000      4096  6-Jul-2020 22:00 Fonts
+ 13536410 -rw-rw-r--  1000   1000     49492  7-Jul-2020 13:25 Resume.pdf
+ 14944680 drwxrwxr-x  1000   1000      4096 23-Jul-2020 14:36 MCIT
+ 11403433 drwxrwxr-x  1000   1000      4096  3-Jul-2020 10:41 EPG294
+ 11403292 drwxrwxr-x  1000   1000      4096 30-Jun-2020 16:56 SAS
+ 5551630 -rw-rw-r--  1000   1000       246 21-Jul-2020 21:08 DailyToDo.md
+ 6056057 -rw-rw-r--  1000   1000     36093 22-Jul-2020 07:42 planned_enrollment_form.pdf
+ 5551721 -rw-rw-r--  1000   1000      3547 22-Jul-2020 07:45 planned_enrol_form_signed.xoj
+ 5551012 -rw-rw-r--  1000   1000      3547 22-Jul-2020 07:46 planned_enrol_form_signed.pdf
+
+dir_partition inode=17826859
+   P Linux                  514   0  1 488385  63 32  999161856
+     ext4 blocksize=4096 Large_file Sparse_SB Recover, 511 GB / 476 GiB
+Directory /home/bexx/Documents/Books
+ 17826859 drwxrwxr-x  1000   1000      4096  1-Aug-2020 21:53 .
+ 5506030 drwxr-xr-x  1000   1000      4096 23-Jul-2020 14:35 ..
+ 13501193 -rw-rw-r--  1000   1000  18903796  5-Jul-2020 21:42 progit.pdf
+ 17825798 -rw-r--r--     0      0 63600328704  1-Aug-2020 21:56 image.dd
+X17827143 -rw-rw-r--  1000   1000         0  1-Aug-2020 21:31 git_notes.txt
+X17827031 -rw-rw-r--  1000   1000        24 15-Jul-2020 06:43 git_notes.txt~
+Directory /home/bexx/Documents
+ 5506030 drwxr-xr-x  1000   1000      4096 23-Jul-2020 14:35 .
+ 3933821 drwxr-xr-x  1000   1000      4096  1-Aug-2020 22:17 ..
+ 17826859 drwxrwxr-x  1000   1000      4096  1-Aug-2020 21:53 Books
+ 6425109 drwxrwxrwx  1000   1000      4096 18-Jun-2020 14:47 Cheatsheats
+ 5536163 -rw-rw-r--  1000   1000   2734692 28-Jun-2020 09:47 wasd-inkscape-104-06.11.2020.svg
+ 17833978 drwxrwxr-x  1000   1000      4096 10-Jul-2020 18:07 Keyboard
+ 10888435 drwxrwxr-x  1000   1000      4096  6-Jul-2020 22:00 Fonts
+ 13536410 -rw-rw-r--  1000   1000     49492  7-Jul-2020 13:25 Resume.pdf
+ 14944680 drwxrwxr-x  1000   1000      4096 23-Jul-2020 14:36 MCIT
+ 11403433 drwxrwxr-x  1000   1000      4096  3-Jul-2020 10:41 EPG294
+ 11403292 drwxrwxr-x  1000   1000      4096 30-Jun-2020 16:56 SAS
+ 5551630 -rw-rw-r--  1000   1000       246 21-Jul-2020 21:08 DailyToDo.md
+ 6056057 -rw-rw-r--  1000   1000     36093 22-Jul-2020 07:42 planned_enrollment_form.pdf
+ 5551721 -rw-rw-r--  1000   1000      3547 22-Jul-2020 07:45 planned_enrol_form_signed.xoj
+ 5551012 -rw-rw-r--  1000   1000      3547 22-Jul-2020 07:46 planned_enrol_form_signed.pdf
+
+dir_partition inode=17826859
+   P Linux                  514   0  1 488385  63 32  999161856
+     ext4 blocksize=4096 Large_file Sparse_SB Recover, 511 GB / 476 GiB
+Directory /home/bexx/Documents/Books
+ 17826859 drwxrwxr-x  1000   1000      4096  1-Aug-2020 21:53 .
+ 5506030 drwxr-xr-x  1000   1000      4096 23-Jul-2020 14:35 ..
+ 13501193 -rw-rw-r--  1000   1000  18903796  5-Jul-2020 21:42 progit.pdf
+ 17825798 -rw-r--r--     0      0 63600328704  1-Aug-2020 21:56 image.dd
+X17827143 -rw-rw-r--  1000   1000         0  1-Aug-2020 21:31 git_notes.txt
+X17827031 -rw-rw-r--  1000   1000        24 15-Jul-2020 06:43 git_notes.txt~
+Directory /home/bexx/Documents
+ 5506030 drwxr-xr-x  1000   1000      4096 23-Jul-2020 14:35 .
+ 3933821 drwxr-xr-x  1000   1000      4096  1-Aug-2020 22:17 ..
+ 17826859 drwxrwxr-x  1000   1000      4096  1-Aug-2020 21:53 Books
+ 6425109 drwxrwxrwx  1000   1000      4096 18-Jun-2020 14:47 Cheatsheats
+ 5536163 -rw-rw-r--  1000   1000   2734692 28-Jun-2020 09:47 wasd-inkscape-104-06.11.2020.svg
+ 17833978 drwxrwxr-x  1000   1000      4096 10-Jul-2020 18:07 Keyboard
+ 10888435 drwxrwxr-x  1000   1000      4096  6-Jul-2020 22:00 Fonts
+ 13536410 -rw-rw-r--  1000   1000     49492  7-Jul-2020 13:25 Resume.pdf
+ 14944680 drwxrwxr-x  1000   1000      4096 23-Jul-2020 14:36 MCIT
+ 11403433 drwxrwxr-x  1000   1000      4096  3-Jul-2020 10:41 EPG294
+ 11403292 drwxrwxr-x  1000   1000      4096 30-Jun-2020 16:56 SAS
+ 5551630 -rw-rw-r--  1000   1000       246 21-Jul-2020 21:08 DailyToDo.md
+ 6056057 -rw-rw-r--  1000   1000     36093 22-Jul-2020 07:42 planned_enrollment_form.pdf
+ 5551721 -rw-rw-r--  1000   1000      3547 22-Jul-2020 07:45 planned_enrol_form_signed.xoj
+ 5551012 -rw-rw-r--  1000   1000      3547 22-Jul-2020 07:46 planned_enrol_form_signed.pdf
+Directory /home/bexx
+ 3933821 drwxr-xr-x  1000   1000      4096  1-Aug-2020 22:17 .
+ 3932161 drwxr-xr-x     0      0      4096 18-Jun-2020 19:31 ..
+ 3932221 -rw-r--r--  1000   1000     17803 18-Jul-2020 22:00 .bashrc
+ 3933823 -rw-r--r--  1000   1000       220 18-Jun-2020 19:31 .bash_logout
+ 3932220 -rw-r--r--  1000   1000       807  7-Jul-2020 21:16 .profile
+ 3933964 drwxr-xr-x  1000   1000      4096 18-Jun-2020 22:01 .local
+ 4327061 drwxr-xr-x  1000   1000      4096  1-Aug-2020 09:18 .config
+ 4589219 drwxr-xr-x  1000   1000      4096 23-Jul-2020 21:36 .cache
+ 5506010 drwx------  1000   1000      4096  1-Aug-2020 21:37 .gnupg
+ 5506021 drwxr-xr-x  1000   1000      4096 18-Jun-2020 19:44 Desktop
+ 5506023 drwxr-xr-x  1000   1000     12288  1-Aug-2020 22:00 Downloads
+ 5506028 drwxr-xr-x  1000   1000      4096 18-Jun-2020 19:44 Templates
+ 5506029 drwxr-xr-x  1000   1000      4096 18-Jun-2020 19:44 Public
+ 5506030 drwxr-xr-x  1000   1000      4096 23-Jul-2020 14:35 Documents
+ 5506031 drwxr-xr-x  1000   1000      4096 18-Jun-2020 19:44 Music
+ 5506032 drwxr-xr-x  1000   1000      4096  1-Aug-2020 16:04 Pictures
+ 5506033 drwxr-xr-x  1000   1000      4096 19-Jul-2020 22:14 Videos
+ 5506179 drwx------  1000   1000      4096 18-Jun-2020 19:45 .mozilla
+ 5506245 drwxr-xr-x  1000   1000      4096 21-Jul-2020 17:06 snap
+ 3933965 -rw-r--r--  1000   1000         0 18-Jun-2020 19:55 .sudo_as_admin_successful
+ 3932226 -rw-------  1000   1000     42322  1-Aug-2020 22:17 .bash_history
+ 3933967 drwx------  1000   1000      4096 20-Jun-2020 07:01 .ssh
+ 3933968 drwxrwxrwx  1000   1000      4096  1-Aug-2020 08:17 Projects
+ 3935451 -rw-rw-r--  1000   1000       231 12-Jul-2020 13:35 .wget-hsts
+ 3935452 drwxr-xr-x  1000   1000      4096 18-Jun-2020 21:26 .var
+ 4071576 drwxrwxrwx  1000   1000      4096 18-Jun-2020 14:48 HydraPaper-1.2
+ 3935529 drwxrwxr-x  1000   1000      4096 18-Jun-2020 21:35 anaconda3
+ 3935534 drwxrwxr-x  1000   1000      4096 18-Jun-2020 21:39 .conda
+ 3932204 -rw-------  1000   1000       839 29-Jul-2020 20:14 .python_history
+ 3935532 -rw-rw-r--  1000   1000        43 18-Jun-2020 21:39 .condarc
+ 3935612 drwxrwxr-x  1000   1000      4096 18-Jun-2020 21:39 .anaconda
+ 3937062 drwxrwxr-x  1000   1000      4096 26-Jun-2020 13:32 .jupyter
+ 3937064 drwxrwxr-x  1000   1000      4096 18-Jun-2020 21:56 .vscode
+ 3937067 drwx------  1000   1000      4096 18-Jun-2020 21:56 .pki
+ 3937189 drwxrwxr-x  1000   1000      4096  1-Aug-2020 11:36 .steam
+ 4327226 drwxrwxr-x  1000   1000      4096 18-Jun-2020 22:11 Steam
+ 3932168 lrwxrwxrwx  1000   1000        29  1-Aug-2020 11:36 .steampath
+ 3932169 lrwxrwxrwx  1000   1000        27  1-Aug-2020 11:36 .steampid
+ 3937202 -rw-------  1000   1000       256 18-Jun-2020 22:11 .pulse-cookie
+ 3937203 drwxrwxr-x  1000   1000      4096 18-Jun-2020 22:17 .tmcbeans
+ 9703410 drwxrwxr-x  1000   1000      4096 18-Jun-2020 22:17 .java
+ 9830666 drwxrwxr-x  1000   1000      4096 25-Jul-2020 08:19 NetBeansProjects
+ 9831037 drwxrwxr-x  1000   1000      4096 18-Jun-2020 22:18 .m2
+ 5513001 drwxrwxr-x  1000   1000      4096  1-Aug-2020 08:18 .pylint.d
+ 3932213 -rw-------  1000   1000     12875 21-Jul-2020 21:08 .viminfo
+ 4457985 drwxrwxr-x  1000   1000      4096 18-Jul-2020 22:14 .vim
+ 10235265 drwx------  1000   1000      4096 19-Jun-2020 06:54 .thunderbird
+ 10235323 drwxr-xr-x  1000   1000      4096  8-Dec-2016 10:24 wallpapers
+ 10235342 drwxr-xr-x  1000   1000      4096 28-Mar-2017 03:43 .icons
+ 10245911 drwxr-xr-x  1000   1000      4096 11-Jul-2020 09:39 .themes
+ 4072385 drwxrwxr-x  1000   1000      4096  1-Aug-2020 22:15 Books
+ 3932218 -rw-rw-r--  1000   1000        84  5-Jul-2020 21:50 .gitconfig
+ 3932223 -rw-rw-r--  1000   1000       782 19-Jul-2020 08:02 .vimrc
+ 3932180 -rw-------  1000   1000     12288 12-Jul-2020 19:57 .swp
+ 5246119 drwx------  1000   1000      4096 22-Jun-2020 21:46 .fltk
+ 4072360 drwxr-xr-x  1000   1000      4096 23-Jun-2020 07:59 .AMD
+ 9571237 drwxr-xr-x  1000   1000      4096 23-Jun-2020 16:06 .ipython
+ 3937751 -rw-rw-r--  1000   1000         0 26-Jun-2020 07:32 .hushlogin
+ 3937090 drwxrwxr-x  1000   1000      4096 26-Jun-2020 12:18 .mono
+ 3937793 drwxrwxr-x  1000   1000      4096 26-Jun-2020 12:20 .kite
+ 3932202 -rw-rw-r--  1000   1000      2994  1-Jul-2020 14:31 gpu_benchmark.txt
+ 3932190 -rw-------  1000   1000         0  1-Jul-2020 22:14 .python_history-58288.tmp
+ 3932175 -rw-r--r--  1000   1000      4525  5-Jul-2020 16:34 .bashrc.save
+ 3932201 -rw-rw-r--  1000   1000       141 12-Jul-2020 13:57 .powerline-shell.json
+ 3932200 -rw-------  1000   1000     12288 17-Jul-2020 21:58 .swo
+ 3932222 -rw-rw-r--  1000   1000  61298592 21-Aug-2019 17:22 slack-desktop-4.0.2-amd64.deb
+ 5114440 drwx------  1000   1000      4096 21-Jul-2020 06:54 .gconf
+ 4460235 drwxrwxr-x  1000   1000      4096 21-Jul-2020 20:49 .zoom
+ 14812085 drwx------  1000   1000      4096 22-Jul-2020 07:45 .xournal
+ 10359085 drwxrwxr-x  1000   1000      4096  1-Aug-2020 09:20 VirtualBox_VMs
+ 3932197 -rw-rw-r--  1000   1000      7915  1-Aug-2020 22:18 testdisk.log
+ 4194331 drwxr-xr-x     0      0      4096  1-Aug-2020 22:15 home
+X3932226 -rw-------  1000   1000     42322  1-Aug-2020 22:17 .bash_history-06785.tmp
+Directory /home
+ 3932161 drwxr-xr-x     0      0      4096 18-Jun-2020 19:31 .
+       2 drwxr-xr-x     0      0      4096 18-Jun-2020 22:03 ..
+ 3933821 drwxr-xr-x  1000   1000      4096  1-Aug-2020 22:17 bexx
+Directory /
+       2 drwxr-xr-x     0      0      4096 18-Jun-2020 22:03 .
+       2 drwxr-xr-x     0      0      4096 18-Jun-2020 22:03 ..
+      11 drwx------     0      0     16384 18-Jun-2020 19:29 lost+found
+ 5505025 drwxr-xr-x     0      0      4096 27-Jul-2020 09:52 boot
+      12 -rw-------     0      0 2147483648 18-Jun-2020 19:29 swapfile
+ 28180481 drwxr-xr-x     0      0     12288  1-Aug-2020 09:16 etc
+ 22937601 drwxr-xr-x     0      0      4096 18-Jun-2020 19:44 media
+ 17694721 drwxr-xr-x     0      0      4096 23-Apr-2020 03:42 var
+      13 lrwxrwxrwx     0      0         7 18-Jun-2020 19:29 bin
+ 30539777 drwxr-xr-x     0      0      4096 23-Apr-2020 03:38 dev
+ 3932161 drwxr-xr-x     0      0      4096 18-Jun-2020 19:31 home
+      14 lrwxrwxrwx     0      0         7 18-Jun-2020 19:29 lib
+      15 lrwxrwxrwx     0      0         9 18-Jun-2020 19:29 lib32
+      16 lrwxrwxrwx     0      0         9 18-Jun-2020 19:29 lib64
+      17 lrwxrwxrwx     0      0        10 18-Jun-2020 19:29 libx32
+ 10092545 drwxr-xr-x     0      0      4096 18-Jun-2020 20:07 mnt
+ 1572865 drwxr-xr-x     0      0      4096 21-Jul-2020 17:13 opt
+ 12451841 drwxr-xr-x     0      0      4096 15-Apr-2020 07:09 proc
+ 27394049 drwx------     0      0      4096 18-Jul-2020 21:10 root
+ 30015489 drwxr-xr-x     0      0      4096 18-Jun-2020 19:31 run
+      18 lrwxrwxrwx     0      0         8 18-Jun-2020 19:29 sbin
+ 19529729 drwxr-xr-x     0      0      4096 21-Jul-2020 17:11 snap
+ 2228225 drwxr-xr-x     0      0      4096 23-Apr-2020 03:32 srv
+ 10747905 drwxr-xr-x     0      0      4096 15-Apr-2020 07:09 sys
+ 19791873 drwxrwxrwt     0      0     12288  1-Aug-2020 22:00 tmp
+  393217 drwxr-xr-x     0      0      4096 23-Apr-2020 03:34 usr
+ 26214401 drwxrwxr-x     0      0      4096 18-Jun-2020 19:30 cdrom
+X     19 -rw-r--r--     0      0         0 18-Jun-2020 22:03 ..bashrc.swp
+      20 -rw-r--r--     0      0       272 18-Jun-2020 22:03 .bashrc
+
+interface_write()
+ 1 * FAT32                    1   0  1   512  63 32    1048576 [NO NAME]
+ 2 P Linux                  514   0  1 488385  63 32  999161856
+simulate write!
+
+write_mbr_i386: starting...
+write_all_log_i386: starting...
+No extended partition
+
+TestDisk exited normally.
